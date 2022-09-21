@@ -29,11 +29,7 @@ public class User {
     @NotNull
     private String password;
 
-    private String firstName;
-    private String lastName;
-    private String phoneNo;
-    private String address;
-    private String imgUrl;
+    private String registerDate;
 
     @NotNull
     @Email

@@ -10,6 +10,6 @@ import java.util.List;
 public interface UserService {
     boolean isTakenUsername(String username);
     boolean isTakenEmail(String email);
-    User createUser(CreateUserDto dto);
+     void createUser(CreateUserDto dto);
 
 }

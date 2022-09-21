@@ -29,6 +29,5 @@ public class CreateUserDto {
     @UniqueEmail
     private String email;
 
-    private Long roleId;
 
 }

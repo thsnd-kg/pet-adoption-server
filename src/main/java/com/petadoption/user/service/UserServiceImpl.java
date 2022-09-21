@@ -32,14 +32,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User createUser(CreateUserDto dto) {
+    public void createUser(CreateUserDto dto) {
         User newUser = new User();
 
         newUser.setUsername(dto.getUsername());
         newUser.setEmail(dto.getEmail());
         newUser.setPassword(encoder.encode(dto.getPassword()));
 
-        return repository.save(newUser);
+        repository.save(newUser);
     }
 
 

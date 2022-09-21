@@ -13,37 +13,40 @@ import java.util.Map;
 public class ResponseHandler {
     public static ResponseEntity<Object> getResponse(Object content, HttpStatus status){
         Map<String, Object> map = new HashMap<>();
-        map.put("content", content);
+        map.put("data", content);
         map.put("errors", "");
         map.put("timestamp", DateUtils.toString(LocalDateTime.now()));
         map.put("status", status.value());
+        map.put("success", true);
 
         return new ResponseEntity<>(map, status);
     }
 
     public static ResponseEntity<Object> getResponse(BindingResult errors, HttpStatus status){
         Map<String, Object> map = new HashMap<>();
-        map.put("content", "");
+        map.put("data", "");
         map.put("errors", ErrorUtils.getErrorMessages(errors));
         map.put("timestamp", DateUtils.toString(LocalDateTime.now()));
         map.put("status", status.value());
+        map.put("success", false);
 
         return new ResponseEntity<>(map, status);
     }
 
     public static ResponseEntity<Object> getResponse(Exception e, HttpStatus status){
         Map<String, Object> map = new HashMap<>();
-        map.put("content", "");
+        map.put("data", "");
         map.put("errors", e.getMessage());
         map.put("timestamp", DateUtils.toString(LocalDateTime.now()));
         map.put("status", status.value());
+        map.put("success", false);
 
         return new ResponseEntity<>(map, status);
     }
 
     public static Object getResponse(HttpStatus status) {
         Map<String, Object> map = new HashMap<>();
-        map.put("content", "");
+        map.put("data", "");
         map.put("errors", "");
         map.put("timestamp", DateUtils.toString(LocalDateTime.now()));
         map.put("status", status.value());

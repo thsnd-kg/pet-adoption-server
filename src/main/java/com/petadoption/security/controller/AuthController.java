@@ -72,10 +72,8 @@ public class AuthController {
             if(errors.hasErrors())
                 return ResponseHandler.getResponse(errors, HttpStatus.BAD_REQUEST);
 
-            dto.setRoleId(null);
-            User addedUser = userService.createUser(dto);
-
-            return ResponseHandler.getResponse(addedUser, HttpStatus.CREATED);
+            userService.createUser(dto);
+            return ResponseHandler.getResponse(HttpStatus.CREATED);
         } catch (Exception e){
             return ResponseHandler.getResponse(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
