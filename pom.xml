@@ -8,11 +8,11 @@
         <version>2.7.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.petadoption</groupId>
-    <artifactId>pet-adoption-server</artifactId>
+    <groupId>com.petamin</groupId>
+    <artifactId>petamin-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pet-adoption-server</name>
-    <description>pet-adoption-server</description>
+    <name>petamin-server</name>
+    <description>petamin-server</description>
     <properties>
         <java.version>17</java.version>
     </properties>
