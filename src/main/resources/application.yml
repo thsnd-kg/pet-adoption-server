@@ -4,9 +4,9 @@ spring:
       matching-strategy: ant_path_matcher
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/petamin
-    username: postgres
-    password: 1111
+    url: jdbc:postgresql://ec2-52-207-90-231.compute-1.amazonaws.com:5432/d7rbglqg2pf977
+    username: hvpvqmiggaxdus
+    password: eba73bfb89b0cf04de4931376ffde8e4af735be1ccf73ca71166456e539b23b2
 
   jpa:
     properties:
