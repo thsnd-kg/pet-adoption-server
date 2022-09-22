@@ -1,4 +1,8 @@
+
 spring:
+  application:
+    name: petamin
+
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
